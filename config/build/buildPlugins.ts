@@ -1,8 +1,8 @@
-import HTMLWebpackPlugin from "html-webpack-plugin";
-import webpack, {WebpackPluginInstance} from "webpack";
-import {BuildOptions} from "./types/config";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import HTMLWebpackPlugin from 'html-webpack-plugin';
+import webpack, {WebpackPluginInstance} from 'webpack';
+import {BuildOptions} from './types/config';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
   const { isDev, paths } = options;
