@@ -21,6 +21,12 @@ module.exports = {
       'parserOptions': {
         'sourceType': 'script'
       }
+    },
+    {
+      'files': [ '**/src/**/*.test.{ts,tsx}' ],
+      'rules': {
+        'i18next/no-literal-string': 'off'
+      }
     }
   ],
   'parser': '@typescript-eslint/parser',
@@ -50,11 +56,17 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/extensions': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': [ 'error', { markupOnly: true } ],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        'markupOnly': true,
+        'ignoreAttribute': [ 'data-testid', 'to' ]
+      }
+    ],
     'max-len': [ 'error', { 'code': 120, 'ignoreComments': true } ],
     'object-curly-spacing': [ 2, 'always' ],
     'array-bracket-spacing': [ 2, 'always' ],
-    'react/self-closing-comp': [ 2, { 'component': true , 'html': true } ]
+    'react/self-closing-comp': [ 2, { 'component': true , 'html': true } ],
   },
   'globals': {
     '__IS__DEV__': true
