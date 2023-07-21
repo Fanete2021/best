@@ -53,7 +53,8 @@ module.exports = {
     'i18next/no-literal-string': [ 'error', { markupOnly: true } ],
     'max-len': [ 'error', { 'code': 120, 'ignoreComments': true } ],
     'object-curly-spacing': [ 2, 'always' ],
-    'array-bracket-spacing': [ 2, 'always' ]
+    'array-bracket-spacing': [ 2, 'always' ],
+    'react/self-closing-comp': [ 2, { 'component': true , 'html': true } ]
   },
   'globals': {
     '__IS__DEV__': true
