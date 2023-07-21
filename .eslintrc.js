@@ -1,7 +1,8 @@
 module.exports = {
   'env': {
     'browser': true,
-    'es2021': true
+    'es2021': true,
+    'jest': true
   },
   'extends': [
     'eslint:recommended',
@@ -33,23 +34,26 @@ module.exports = {
     'i18next'
   ],
   'rules': {
-    'indent': [2, 2],
-    'linebreak-style': [2, 'windows'],
-    'quotes': [2, 'single'],
-    'semi': [2, 'always'],
-    'react/jsx-indent': [2, 2],
+    'indent': [ 2, 2 ],
+    'linebreak-style': [ 2, 'windows' ],
+    'quotes': [ 2, 'single' ],
+    'semi': [ 2, 'always' ],
+    'react/jsx-indent': [ 2, 2 ],
     'react/no-deprecated': 'off',
     'no-unused-vars': 'warn',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-indent-props': [2, 2],
+    'react/jsx-indent-props': [ 2, 2 ],
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-declaration': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/extensions': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }]
+    'i18next/no-literal-string': [ 'error', { markupOnly: true } ],
+    'max-len': [ 'error', { 'code': 120, 'ignoreComments': true } ],
+    'object-curly-spacing': [ 2, 'always' ],
+    'array-bracket-spacing': [ 2, 'always' ]
   },
   'globals': {
     '__IS__DEV__': true

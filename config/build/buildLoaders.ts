@@ -1,9 +1,9 @@
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import {BuildOptions} from './types/config';
+import { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
-  const {isDev} = options;
+  const { isDev } = options;
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff?2)$/i,
@@ -16,7 +16,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
   const svgLoader = {
     test: /\.svg$/,
-    use: ['@svgr/webpack']
+    use: [ '@svgr/webpack' ]
   };
 
   const babelLoader = {
@@ -25,12 +25,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     use: {
       loader: 'babel-loader',
       options: {
-        presets: ['@babel/preset-env'],
+        presets: [ '@babel/preset-env' ],
         'plugins': [
           [
             'i18next-extract',
             {
-              locales: ['ru', 'en'],
+              locales: [ 'ru', 'en' ],
               keyAsDefaultValue: true
             }
           ]
