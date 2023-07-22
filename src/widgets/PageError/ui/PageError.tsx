@@ -22,7 +22,7 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
       </p>
 
       <Button
-        theme={ThemeButton.CLEAR}
+        theme={ThemeButton.OUTLINE}
         onClick={reloadPage}
       >
         {t('Обновить страницу')}

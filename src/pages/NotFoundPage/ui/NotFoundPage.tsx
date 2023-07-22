@@ -16,3 +16,5 @@ export const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {
     </div>
   );
 };
+
+export default NotFoundPage;
