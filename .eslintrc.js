@@ -68,7 +68,8 @@ module.exports = {
     'object-curly-spacing': [ 2, 'always' ],
     'array-bracket-spacing': [ 2, 'always' ],
     'react/self-closing-comp': [ 2, { 'component': true , 'html': true } ],
-    'react/display-name': 'warn'
+    'react/display-name': 'warn',
+    'linebreak-style': 'off'
   },
   'globals': {
     '__IS__DEV__': true
