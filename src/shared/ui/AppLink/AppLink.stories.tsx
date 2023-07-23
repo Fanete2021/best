@@ -14,34 +14,16 @@ const meta: Meta<typeof AppLink> = {
 export default meta;
 type Story = StoryObj<typeof AppLink>;
 
-export const PrimaryLight: Story = {
+export const Light: Story = {
   args: {
     children: 'Текст',
-    theme: AppLinkTheme.PRIMARY
   },
   decorators: [ ThemeDecorator(Theme.LIGHT) ]
 };
 
-export const PrimaryDark: Story = {
+export const Dark: Story = {
   args: {
     children: 'Текст',
-    theme: AppLinkTheme.PRIMARY
-  },
-  decorators: [ ThemeDecorator(Theme.DARK) ]
-};
-
-export const SecondaryLight: Story = {
-  args: {
-    children: 'Текст',
-    theme: AppLinkTheme.SECONDARY
-  },
-  decorators: [ ThemeDecorator(Theme.LIGHT) ]
-};
-
-export const SecondaryDark: Story = {
-  args: {
-    children: 'Текст',
-    theme: AppLinkTheme.SECONDARY
   },
   decorators: [ ThemeDecorator(Theme.DARK) ]
 };

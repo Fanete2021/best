@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 
 describe('Button', () => {
   test('test render', () => {
@@ -11,7 +11,7 @@ describe('Button', () => {
   test('Test clear theme', () => {
     render(
       <Button
-        theme={ThemeButton.CLEAR}
+        theme={ButtonTheme.CLEAR}
       >
         Test
       </Button>

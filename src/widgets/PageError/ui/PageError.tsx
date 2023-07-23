@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './PageError.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui';
+import { Button, ButtonTheme } from 'shared/ui';
 
 interface PageErrorProps {
   className?: string;
@@ -22,7 +22,7 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
       </p>
 
       <Button
-        theme={ThemeButton.OUTLINE}
+        theme={ButtonTheme.OUTLINE}
         onClick={reloadPage}
       >
         {t('Обновить страницу')}
