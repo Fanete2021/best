@@ -6,8 +6,8 @@ import { Theme } from 'app/providers/ThemeProvider';
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
-  argTypes: {
-
+  args: {
+    children: 'Text'
   }
 };
 
@@ -15,15 +15,9 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Light: Story = {
-  args: {
-    children: 'Text',
-  },
   decorators: [ ThemeDecorator(Theme.LIGHT) ]
 };
 
 export const Dark: Story = {
-  args: {
-    children: 'Text',
-  },
   decorators: [ ThemeDecorator(Theme.DARK) ]
 };

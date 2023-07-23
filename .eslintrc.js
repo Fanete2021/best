@@ -9,7 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:i18next/recommended'
+    'plugin:i18next/recommended',
   ],
   'overrides': [
     {
@@ -38,11 +38,11 @@ module.exports = {
   'plugins': [
     '@typescript-eslint',
     'react',
-    'i18next'
+    'i18next',
+    'react-hooks'
   ],
   'rules': {
     'indent': [ 2, 2 ],
-    'linebreak-style': [ 2, 'windows' ],
     'quotes': [ 2, 'single' ],
     'semi': [ 2, 'always' ],
     'react/jsx-indent': [ 2, 2 ],
@@ -69,7 +69,11 @@ module.exports = {
     'array-bracket-spacing': [ 2, 'always' ],
     'react/self-closing-comp': [ 2, { 'component': true , 'html': true } ],
     'react/display-name': 'warn',
-    'linebreak-style': 'off'
+    'linebreak-style': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error'
   },
   'globals': {
     '__IS__DEV__': true
