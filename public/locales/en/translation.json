@@ -9,5 +9,7 @@
   "Короткий язык": "En",
   "Войти": "log in",
   "увеличить": "increment",
-  "уменьшить": "decrement"
+  "уменьшить": "decrement",
+  "Имя": "Username",
+  "Пароль": "Password"
 }
