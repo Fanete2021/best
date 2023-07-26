@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { LoginForm } from './LoginForm';
+import { Text } from './Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-const meta: Meta<typeof LoginForm> = {
-  title: 'features/LoginForm',
-  component: LoginForm,
-  decorators: [ StoreDecorator({
-    login: { username: '123', password: '123' }
-  }) ]
+const meta: Meta<typeof Text> = {
+  title: 'shared/Text',
+  component: Text,
+  args: {
+    title: 'title',
+    text: 'text'
+  }
 };
 
 export default meta;
-type Story = StoryObj<typeof LoginForm>;
+type Story = StoryObj<typeof Text>;
 
 export const Light: Story = {
   decorators: [ ThemeDecorator(Theme.LIGHT) ]
