@@ -47,14 +47,17 @@ module.exports = {
     'semi': [ 2, 'always' ],
     'react/jsx-indent': [ 2, 2 ],
     'react/no-deprecated': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-indent-props': [ 2, 2 ],
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-declaration': 'off',
     'no-shadow': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { 'argsIgnorePattern': '^_' }
+    ],
     'import/extensions': 'off',
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [

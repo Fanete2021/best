@@ -1,21 +1,17 @@
-import React, { FC, useState } from 'react';
+import React, { memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './Sidebar.module.scss';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
-import { AppLink, AppLinkTheme, Button, ButtonSize, ButtonTheme } from 'shared/ui';
-import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import MainIcon from 'shared/assets/icons/home.svg';
-import AboutIcon from 'shared/assets/icons/about.svg';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui';
+import { SidebarItem, SidebarItemsList } from 'widgets/Sidebar';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
   const [ collapsed, setCollapsed ] = useState<boolean>(false);
-  const { t } = useTranslation();
 
   const onToggle = () => {
     setCollapsed(prev => !prev);
@@ -38,15 +34,13 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       </Button>
 
       <div className={styles.items}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main} className={styles.item}>
-          <MainIcon className={styles.icon}/>
-          <span className={styles.link}>{t('Главная')}</span>
-        </AppLink>
-
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about} className={styles.item}>
-          <AboutIcon className={styles.icon}/>
-          <span className={styles.link}>{t('О сайте')}</span>
-        </AppLink>
+        {SidebarItemsList.map((item) => (
+          <SidebarItem
+            key={item.path}
+            item={item}
+            collapsed={collapsed}
+          />
+        ))}
       </div>
 
       <div className={styles.switchers}>
@@ -58,4 +52,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       </div>
     </div>
   );
-};
+});
