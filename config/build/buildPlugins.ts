@@ -6,7 +6,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
-  const { isDev, paths } = options;
+  const { isDev, paths, apiURL } = options;
 
   const plugins: WebpackPluginInstance[] = [
     new HTMLWebpackPlugin({
@@ -18,7 +18,8 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
       chunkFilename: 'css/[name].[contenthash:8].css'
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
+      __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiURL)
     }),
   ];
 
