@@ -1,10 +1,12 @@
 import { AppLink , AppLinkTheme } from './AppLink/AppLink';
+import { Avatar } from './Avatar/Avatar';
 import { Button, ButtonTheme, ButtonSize } from './Button/Button';
 import { Input } from './Input/Input';
 import { Loader } from './Loader/Loader';
 import { Modal } from './Modal/Modal';
 import { Portal } from './Portal/Portal';
-import { Text, TextTheme } from './Text/Text';
+import { Select } from './Select/Select';
+import { Text, TextAlign, TextTheme } from './Text/Text';
 
 export {
   AppLink,
@@ -17,5 +19,8 @@ export {
   Portal,
   Input,
   Text,
-  TextTheme
+  TextTheme,
+  TextAlign,
+  Avatar,
+  Select
 };

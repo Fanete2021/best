@@ -13,7 +13,9 @@
   "Имя": "Username",
   "Пароль": "Password",
   "Форма авторазиции": "Auth form",
-  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Вы ввели неверный логин или пароль": "Incorrect username or password",
   "Выйти": "Logout",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Укажите валюту": "Specify the currency",
+  "Укажите страну": "Specify the city"
 }
