@@ -11,4 +11,9 @@
   "Город": "City",
   "Никнэйм": "Username",
   "Аватар": "Avatar",
+  "Серверная ошибка при сохранении": "Server error when saving",
+  "Некорректный возраст": "Incorrect age",
+  "Имя и фамилия обязательны": "First and last name are required",
+  "Некорректный регион": "Invalid region",
+  "Данные не указаны": "Data is not specified"
 }
