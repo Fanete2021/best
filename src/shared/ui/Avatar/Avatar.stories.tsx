@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from './Avatar';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import AvatarImg from './avatar.jpg';
+import AvatarImg from '../../assets/tests/avatar.jpg';
 
 const meta: Meta<typeof Avatar> = {
-  title: 'shared/AppLink',
+  title: 'shared/Avatar',
   component: Avatar,
   args: {
     src: AvatarImg,
