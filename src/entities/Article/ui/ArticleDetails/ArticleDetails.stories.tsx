@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { ArticleDetails } from './ArticleDetails';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
@@ -40,26 +40,55 @@ const article: Article = {
   ]
 };
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
+const meta: Meta<typeof ArticleDetails> = {
+  title: 'entities/ArticleDetails',
+  component: ArticleDetails,
+  args: {}
+};
+
+export default meta;
+type Story = StoryObj<typeof ArticleDetails>;
+
+export const Light: Story = {
   decorators: [
+    ThemeDecorator(Theme.LIGHT),
     StoreDecorator({
       articleDetails: {
         data: article
       }
     })
-  ],
-  args: {}
-};
-
-export default meta;
-type Story = StoryObj<typeof ArticleDetailsPage>;
-
-export const Light: Story = {
-  decorators: [ ThemeDecorator(Theme.LIGHT) ]
+  ]
 };
 
 export const Dark: Story = {
-  decorators: [ ThemeDecorator(Theme.DARK) ]
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      }
+    })
+  ]
+};
+
+export const Loading: Story = {
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+      articleDetails: {
+        isLoading: true
+      }
+    })
+  ]
+};
+
+export const Error: Story = {
+  decorators: [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+      articleDetails: {
+        error: 'error'
+      }
+    })
+  ]
 };

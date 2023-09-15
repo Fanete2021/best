@@ -1,6 +1,8 @@
 import { FC, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './ArticleDetailsPage.module.scss';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 interface ArticleDetailsPageProps {
@@ -13,10 +15,19 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   } = props;
 
   const { t } = useTranslation();
+  const { id } = useParams<{id: string}>();
+
+  if (!id) {
+    return (
+      <div className={classNames(styles.ArticleDetailsPage, {}, [ className ])}>
+        {t('Статья не найдена')}
+      </div>
+    );
+  }
 
   return (
     <div className={classNames(styles.ArticleDetailsPage, {}, [ className ])}>
-      Article Details
+      <ArticleDetails id={id}/>
     </div>
   );
 };

@@ -12,10 +12,10 @@ render(
     <StoreProvider>
       <ErrorBoundary>
         <ThemeProvider>
-          <App/>
+          <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </StoreProvider>,
+    </StoreProvider>
   </BrowserRouter>,
   document.getElementById('app')
 );
