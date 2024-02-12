@@ -115,17 +115,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://i.pinimg.com/originals/0b/76/5f/0b765f83611680bf8823cffe49950fc9.jpg"
+      "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
     }
   ],
-  "profile": {
-    "first": "Артем",
-    "lastname": "Байрамов",
-    "age": 22,
-    "currency": "USD",
-    "country": "Kazakhstan",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://i.pinimg.com/originals/0b/76/5f/0b765f83611680bf8823cffe49950fc9.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Артем",
+      "lastname": "Байрамов",
+      "age": 22,
+      "currency": "USD",
+      "country": "Kazakhstan",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://i.pinimg.com/originals/0b/76/5f/0b765f83611680bf8823cffe49950fc9.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Андрей",
+      "lastname": "Старков",
+      "age": 22,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user2",
+      "avatar": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png"
+    }
+  ]
 }
